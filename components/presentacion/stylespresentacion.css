@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand';
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-image: url("../../assets/Con\ lo\ que\ tengo!\ \(Fondo\ de\ pantalla\)\ \(3\).png");
+  background-repeat: no-repeat;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.imagencontacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactologo {
+  height: 300px;
+  width: 600px;
+  margin:auto;
+}
+
+.text p{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(90, 56, 29);
+  margin: 20px;
+}
+.text {
+margin:  100px;
+margin-top: -100px;
+}
+
+.button1{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-top: -70PX;
+  margin-bottom: 80px;
+  
+}
+.button2{
+  background: orange;
+  padding: 4%;
+  border: none;
+  border-radius: 53% 47% 54% 46% / 20% 54% 46% 80%;
+}
+
+footer {
+    background: #f8f9fa;
+    padding: 30px 0;   
+}
+  
+footer h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+  
+footer p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: #007bff;
+}
+
+footer .col-md-12{
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
