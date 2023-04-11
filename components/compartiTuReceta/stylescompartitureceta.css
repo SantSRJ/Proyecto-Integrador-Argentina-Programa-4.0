@@ -32,6 +32,19 @@ body{
   margin:auto;
 }
 
+.button1{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  
+}
+.button2{
+  background: orange;
+  padding: 4%;
+  border: none;
+  border-radius: 53% 47% 54% 46% / 20% 54% 46% 80%;
+}
+
 @media (max-width: 600px) {
   .boton-logo img {
   width: 90%;

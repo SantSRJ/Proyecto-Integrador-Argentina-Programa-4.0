@@ -9,7 +9,7 @@ function generarProductoHTML(producto) {
         <img class="modal-content" src="${producto.image}" alt="${producto.title}"></href=>
       </div>
       <p class="title">ID: ${producto.id}</p>
-      <p class="title-url">Enlace: <a href="${producto.sourceUrl}" target="_blank">${producto.sourceUrl}</a></p>
+      <p class="title-url"><a href="${producto.sourceUrl}" target="_blank">Enlace</a></p>
     </div>
   `;
 };
@@ -97,6 +97,7 @@ function mostrarPagina(pagina) {
   })
   .catch((error) => console.error("Error al cargar los productos:", error));
 }
+
 // Filtrar productos por nombre
 function filtrarProductosPorNombre(productos, busqueda) {
   return productos.filter((producto) =>

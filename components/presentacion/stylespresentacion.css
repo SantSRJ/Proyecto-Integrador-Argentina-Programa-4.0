@@ -44,21 +44,6 @@ margin:  100px;
 margin-top: -100px;
 }
 
-.button1{
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  margin-top: -70PX;
-  margin-bottom: 80px;
-  
-}
-.button2{
-  background: orange;
-  padding: 4%;
-  border: none;
-  border-radius: 53% 47% 54% 46% / 20% 54% 46% 80%;
-}
-
 footer {
     background: #f8f9fa;
     padding: 30px 0;   
