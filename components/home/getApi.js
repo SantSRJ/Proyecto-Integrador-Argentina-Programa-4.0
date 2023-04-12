@@ -3,7 +3,7 @@ function generarProductoHTML(producto) {
   return `
     <div class="producto">
       <p class="title">${producto.title}</p>
-      <a href="#miModal"><img src="${producto.image}" alt="${producto.title}" id="miImagen"></a>
+      <img src="${producto.image}" alt="${producto.title}" id="miImagen">
       <div id="miModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" src="${producto.image}" alt="${producto.title}"></href=>
@@ -16,7 +16,6 @@ function generarProductoHTML(producto) {
 // Generar los botones de paginación
 function generarBotonesPaginacion(numPaginas, paginaActual) {
   const botones = document.createElement("div");
-  
   // Botón "Anterior"
   const botonAnterior = document.createElement("button");
   botonAnterior.innerText = "Anterior";
@@ -25,13 +24,11 @@ function generarBotonesPaginacion(numPaginas, paginaActual) {
     mostrarPagina(paginaActual - 1);
   });
   botones.appendChild(botonAnterior);
-
   // Números de página
-  const maxBotones = 2;
+  const maxBotones = 4;
   const inicio =
     paginaActual <= 2 ? 1 : paginaActual >= numPaginas - 1 ? numPaginas - maxBotones + 1 : paginaActual - 1;
   const fin = Math.min(inicio + maxBotones, numPaginas);
-
   for (let i = inicio; i <= fin; i++) {
     const botonPagina = document.createElement("button");
     botonPagina.innerText = i;
@@ -49,10 +46,8 @@ function generarBotonesPaginacion(numPaginas, paginaActual) {
     mostrarPagina(paginaActual + 1);
   });
   botones.appendChild(botonSiguiente);
-
   return botones;
 };
-
 // Ordenar productos por nombre
 function ordenarProductosPorNombre(productos, ordenAscendente) {
   const orden = ordenAscendente ? 1 : -1;
@@ -68,7 +63,6 @@ function ordenarProductosPorNombre(productos, ordenAscendente) {
     }
   });
 }
-
 // Mostrar la página actual de productos
 function mostrarPagina(pagina) {
   fetch("./recetas.json")
@@ -86,10 +80,8 @@ function mostrarPagina(pagina) {
     .map((producto) => generarProductoHTML(producto))
     .join("");
     document.getElementById("lista-productos").innerHTML = listaProductosHTML;
-    
     // Calcular el número total de páginas
-    const numPaginas = Math.ceil(productos.length / productosPorPagina);
-    
+    const numPaginas = Math.ceil(productos.length / productosPorPagina);   
     // Generar los botones de paginación
     const paginacion = generarBotonesPaginacion(numPaginas, pagina);
     document.getElementById("paginacion").innerHTML = "";
@@ -97,29 +89,6 @@ function mostrarPagina(pagina) {
   })
   .catch((error) => console.error("Error al cargar los productos:", error));
 }
-
-// Filtrar productos por nombre
-function filtrarProductosPorNombre(productos, busqueda) {
-  return productos.filter((producto) =>
-    producto.title.toLowerCase().includes(busqueda.toLowerCase())
-  );
-}
-
-// Función para buscar productos por nombre
-function buscar() {
-  const busqueda = document.getElementById("busqueda").value.trim().toLowerCase();
-  fetch("./recetas.json")
-    .then((response) => response.json())
-    .then((productos) => {
-      const productosFiltrados = filtrarProductosPorNombre(productos, busqueda);
-      // Ordenar los productos filtrados por nombre de forma ascendente
-      const productosOrdenados = ordenarProductosPorNombre(productosFiltrados, true);
-      // Mostrar la primera página de productos ordenados
-      mostrarPagina(1, productosOrdenados);
-    })
-    .catch((error) => console.error("Error al cargar los productos:", error));
-}
-
 // Mostrar la primera página de productos al cargar la página
 mostrarPagina(1);
 
