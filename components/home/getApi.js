@@ -1,7 +1,7 @@
 // Generar el HTML para cada producto
 function generarProductoHTML(producto) {
   return `
-    <div class="producto">
+    <div class="productos">
       <p class="title">${producto.title}</p>
       <img src="${producto.image}" alt="${producto.title}" id="miImagen">
       <div id="miModal" class="modal">

@@ -110,19 +110,17 @@
     </section>
   </div>
   <section id="productos">
-    <div class="contenedor">
       <div class="barra-busqueda">
         <input id="busqueda-input" type="text" placeholder="Buscar receta por su nombre...">
         <button id="buscar-button" onclick="buscarElementos()" class="busqueda-boton">Buscar</button>
       </div>
-      <div class="elementos-container" id="elementos-container"></div>
+      <div id="elementos-container" class="contenedor-productos"></div>
       <script src="busquedaReceta.js"></script>
-    </div>
   </section>
-  <section id="productos">
+  <section id="productos-api">
     <h2 class="titulo-recetas">RECETAS</h2> 
     <div>
-      <div id="lista-productos" class="productos"></div>
+      <div id="lista-productos"></div>
       <script src="getApi.js"></script>
       <div id="paginacion" class="paginacion"></div>
     </div>

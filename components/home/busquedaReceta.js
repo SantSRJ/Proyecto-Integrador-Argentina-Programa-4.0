@@ -1,11 +1,11 @@
 function generarProductoHTML(producto) {
     return `
-      <div class="producto">
+      <div class="productos">
         <p class="title">${producto.title}</p>
         <img src="${producto.image}" alt="${producto.title}" id="miImagen">
         <p class="title">ID: ${producto.id}</p>
         <p class="title-url"><a href="${producto.sourceUrl}" target="_blank">Enlace</a></p>
-        </div>
+      </div>
     `;
   };
 
@@ -57,6 +57,6 @@ function generarProductoHTML(producto) {
       Enlace: ${producto.sourceUrl}
     `;
   
-    doc.text(10, 120, texto);
+    doc.text(10, 10, texto);
     doc.save(`${producto.title}.pdf`);
   }

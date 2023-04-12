@@ -14,9 +14,6 @@ html{
 body{
   background-image: url("../../assets/Con\ lo\ que\ tengo!\ \(Fondo\ de\ pantalla\)\ \(3\).png");
   background-repeat: no-repeat;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
   background-size: cover;
 }
 
@@ -30,12 +27,6 @@ body{
   }
 }
 
-.contenedor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .barra-busqueda {
   display: flex;
   justify-content: center;
@@ -46,13 +37,15 @@ body{
 .barra-busqueda input {
   width: 300px;
   margin-right: 10px;
-}
-
-.elementos-container {
-  display: inline-block;
-  width: calc(33.33% - 11px);
-  margin: 5px 1px;
   text-align: center;
+  background-color: white;
+  color: #000000;
+  box-shadow: 0px 0px 2px 2px orange;
+  -webkit-box-shadow: 0px 0px 5px 5px orange;
+  margin-left: 5px;
+  border: transparent;
+  font-weight: bold;
+  border-radius: 95% 47% 54% 46% / 20% 54% 46% 80%;
 }
 
 .busqueda-boton {
@@ -69,16 +62,16 @@ body{
   border-radius: 53% 47% 54% 46% / 20% 54% 46% 80%;
 }
 
-.producto {
+.productos {
   display: inline-block;
   width: calc(33.33% - 5px);
   margin: 5px;
   text-align: center;
-  justify-content: center;
   margin-right: 1px;
   margin-left: 1px;
 }
-.producto img {
+
+.productos img {
   max-width: 100%;
   height: auto;
 }
@@ -119,7 +112,6 @@ body{
 }
 
 .button-pdf {
-  display: flex;
   background-color: orange;
   color: #000000;
   box-shadow: 0px 0px 2px 2px orange;
@@ -146,6 +138,7 @@ body{
 .titulo-recetas {
   text-align: center;
   padding: 70px;
+  color: orange
 }
 
 #inputContainer input {
